@@ -11,64 +11,113 @@ body{
 
 }
 
-header{
-
+/* Estilo do menu principal */
+nav {
     background-color: black;
+    padding: 10px 0;
+}
 
-    padding: 15px;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-
-}
-
-header ul{
-
-    list-style: none;
-    display: flex;
-   
-    margin: 0;
     align-items: center;
-
-
 }
 
-header ul li{
-
-    margin-right: 20px;
-    font-size: 24px;
-  
+nav ul li {
+    position: relative;
+    margin: 0 15px;
 }
-header ul li a{
+
+nav ul li a {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    color: white;
     text-decoration: none;
-    margin-top: 5%;
-    color: inherit;
+    font-size: 20px;
+    padding: 10px;
+    transition: color 0.3s;
 }
 
-header h2{
-
-    display: inline-block;
-    margin: 20px;
-
-}
-
-header img{
-
-    height: 60px;
-    width: 100px;
-
-}
-
-header a:hover{
-
+nav ul li a:hover {
     text-decoration: underline;
-
 }
 
-.headerImage {
+.btn-login {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: #a347ff;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
 
-    position:absolute;
-    left: 0;
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
 
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu hamburguer para telas menores */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: black;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .btn-login {
+        font-size: 16px;
+    }
 }
 
 hr{

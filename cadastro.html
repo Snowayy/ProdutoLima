@@ -10,14 +10,21 @@
 <body>
     <header>
         <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <ul>
-                <li class="headerImage"><img src="imagens/cris.png" alt="Cris logo"></li>
-                <li><a href="https://crisordemparanormal.com/">Agentes</a></li>
-                <li><a href="https://crisordemparanormal.com/">Campanhas</a></li>
-                <li><a href="https://crisordemparanormal.com/">Ameaças</a></li>
-                <li><a href="https://crisordemparanormal.com/">Homebrew</a></li>
-                <li><a href="https://crisordemparanormal.com/">Patente</a></li>
-                <li><a href="index.html">Sobre nós</a></li>
+                <li><a href="index.html"><img src="imagens/cris.png" alt="Logo" width="5%"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#containerAmeacas">Produtos</a></li>
+                <li class="dropdown">
+                    <a href="#servicos" class="dropbtn">Serviços</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://crisordemparanormal.com">Design</a></li>
+                        <li><a href="https://crisordemparanormal.com">Desenvolvimento</a></li>
+                        <li><a href="https://crisordemparanormal.com">Marketing</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html"><button class="btn-login">Login</button></a></li>
             </ul>
         </nav>
     </header>
